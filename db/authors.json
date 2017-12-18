@@ -1,0 +1,17 @@
+{
+  "_id": "_design/authors",
+  "language": "javascript",
+  "views": {
+    "byId": {
+      "map": "function(doc) {if (doc.type == 'author') emit(doc._id, doc.name);}"
+    },
+    "byName": {
+      "map": "function(doc) {if (doc.type == 'author') emit(doc.name, null);}"
+    },
+    "byCountry": {
+	"map": "function(doc) {if (doc.type == 'author') emit(doc.country, 1);}",
+	"reduce": "_sum"
+    }
+  }
+}
+

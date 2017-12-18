@@ -1,0 +1,25 @@
+{
+  "_id": "_design/tasks",
+  "language": "javascript",
+  "views": {
+    "byId": {
+      "map": "function(doc) {if (doc.type == 'task') emit(doc._id, doc.slug);}"
+    },
+    "byTitle": {
+       "map": "function(doc) {if (doc.type == 'task') emit(doc.slug, null);}"
+    },
+    "byPriority": {
+	"map": "function(doc) {if (doc.type == 'task') emit(doc.priority, 1);}",
+	"reduce": "_sum"
+    },
+    "byStatus": {
+	"map": "function(doc) {if (doc.type == 'task') emit(doc.status, 1);}",
+	"reduce": "_sum"
+    }
+    "byCategory": {
+	"map": "function(doc) {if (doc.type == 'task') emit(doc.category, 1);}",
+	"reduce": "_sum"
+    }
+  }
+}
+

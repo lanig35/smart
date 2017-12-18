@@ -1,0 +1,29 @@
+{
+  "_id": "_design/books",
+  "language": "javascript",
+  "views": {
+    "byId": {
+      "map": "function(doc) {if (doc.type == 'book') emit(doc._id, doc.slug);}"
+    },
+    "byTitle": {
+      "map": "function(doc) {if (doc.type == 'book') emit(doc.slug, null);}"
+    },
+    "byGenre": {
+	"map": "function(doc) {if (doc.type == 'book') emit(doc.genre, 1);}",
+	"reduce": "_sum"
+    },
+    "byAuthor": {
+	"map": "function(doc) {if (doc.type == 'book') emit(doc.author, 1);}",
+	"reduce": "_sum"
+    },
+    "byPublisher": {
+	"map": "function(doc) {if (doc.type == 'book') emit(doc.publisher, 1);}",
+	"reduce": "_sum"
+    },
+    "byYear": {
+	"map": "function(doc) {if (doc.type == 'book') emit(doc.year, 1);}",
+	"reduce": "_sum"
+    }
+  }
+}
+
