@@ -6,6 +6,7 @@ import requests, json, uuid, random
 from faker import Faker, providers
 from slugify import slugify
 from prettytable import PrettyTable
+import argparse
 
 from util import util
 
@@ -24,29 +25,14 @@ class GenreProvider (providers.BaseProvider):
 @auteurs.option (dest='name', nargs='?', help=u'Nom de la base')
 def init (count, name=None):
     u"création de auteurs exemples"
-    config = current_app.config.get_namespace ('COUCHDB_')
-
-    # récupération nom de la base
-    db = name if name is not None else config.get ('db')
-
-    if db is None:
-        response = {'status': 'error', 'code': 400, 'msg': {'error': u'bad request', 'reason': u'missing DB name'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
-    # préparation requête
-    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    url = config.get('url') + db + '/'
-
-    r = requests.head (url, headers=headers)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': 404, 'msg': {'error': u'not found', 'reason': 'database does not exist'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
 
     # génération des auteurs
     factory = Faker ('fr_FR')
     factory.add_provider (GenreProvider)
+
     for i in range (0, count):
         name = factory.last_name ()
         first_name = factory.first_name ()
@@ -56,14 +42,11 @@ def init (count, name=None):
                 "firstname": first_name,
                 "country": factory.country()
                 }
-        doc = url + str (uuid.uuid4())
-        r = requests.put (doc, headers=headers, data=json.dumps(payload))
-        if r.status_code != 201 and r.status_code != 202:
-            response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
-            current_app.config['logger'].error (response)
-            return json.dumps (response, indent=2)
 
-    response = {'status': 'ok', 'code': 200, 'msg': {'result': count, 'name': db}}
+        if not db.put (str(uuid.uuid4()), data=payload):
+            return json.dumps (db.status(), indent=2)
+
+    response = {'status': 'ok', 'code': 200, 'msg': {'result': count}}
     current_app.config['logger'].info (response)
     return json.dumps (response, indent=2)
 
@@ -73,25 +56,9 @@ def init (count, name=None):
 @auteurs.option (dest='name', nargs='?', help=u'Nom de la base')
 def list (f, count, filter, name=None ):
     u"liste des auteurs"
-    config = current_app.config.get_namespace ('COUCHDB_')
-
-    # récupération nom de la base
-    db = name if name is not None else config.get ('db')
-
-    if db is None:
-        response = {'status': 'error', 'code': 400, 'msg': {'error': u'bad request', 'reason': u'missing DB name'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
-    # préparation requête
-    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    url = config.get('url') + db + '/'
-
-    r = requests.head (url, headers=headers)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': 404, 'msg': {'error': u'not found', 'reason': 'database does not exist'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
 
     # récupération des documents
     params = {
@@ -100,31 +67,30 @@ def list (f, count, filter, name=None ):
             }
 
     if filter == 'country':
-        target = url + '_design/authors/_view/byCountry'
+        target = '_design/authors/_view/byCountry'
         params ['key']='"Thailande"'
         params ['reduce'] = False
     else:
-        target = url + '_design/authors/_view/byId'
+        target = '_design/authors/_view/byId'
 
-    r = requests.get (target, headers=headers, params= params)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    view = db.get (target, params)
+    if view is None:
+        return json.dumps (db.status(), indent=2)
 
     data = []
     table = PrettyTable (['id', 'Name', 'Country'])
 
-    for item in r.json()['rows']:
-        r = requests.get (url + item['id'], headers=headers)
+    for author in view['rows']:
+        doc = db.get (author['id'])
+
         data.append (
                 {
-                    'id' : r.json()['_id'],
-                    'name': r.json()['name'],
-                    'country': r.json()['country'],
+                    'id' : doc['_id'],
+                    'name': doc['name'],
+                    'country': doc['country'],
                 }
             )
-        table.add_row([r.json()['_id'], r.json()['name'], r.json()['country']])
+        table.add_row([doc['_id'], doc['name'], doc['country']])
 
     if f == 'table':
         return table
@@ -132,12 +98,60 @@ def list (f, count, filter, name=None ):
     sortie = {'total': 10, 'count': 10, 'authors': data}
     return json.dumps (sortie, indent=2)
 
-    pass
-
-@auteurs.option (dest='name', nargs='?', help=u'Nom de la base')
-def add (count, name=None):
+@auteurs.option ('-d', '--db', dest='name', default=None, help=u'Nom de la base')
+@auteurs.option ('-c', '--country', dest='country', required=True, help=u'pays')
+@auteurs.option ('auteur', nargs=argparse.REMAINDER, help=u'prénom et nom')
+def add (name, country, auteur):
     u"ajout d'un auteur"
-    pass
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
+
+    payload = {
+            "type": "author",
+            "name": auteur [1],
+            "firstname": auteur [0],
+            "country": country
+            }
+
+    # verification si auteur existe
+    params = {'key': '\"{}\"'.format(payload['name'])}
+    view = db.get ('_design/authors/_view/byName', params=params)
+    if view is None:
+        return json.dumps (db.status(), indent=2)
+
+    if view['rows']:
+        response = {'status': u'error', 'code': 412, 'msg': {'reason': 'author already exist', 'name': payload['name']}}
+        return json.dumps (response, indent=2)
+
+    key = str(uuid.uuid4())
+    if not db.put (key, data=payload):
+        return json.dumps (db.status(), indent=2)
+
+    response = {'status': 'ok', 'code': 200, 'msg': {'result': u'created', 'id': key}}
+    current_app.config['logger'].info (response)
+    return json.dumps (response, indent=2)
+
+@auteurs.option ('-i', '--input', dest='data', type=argparse.FileType ('r'), required=True, help=u'fichier de donneés')
+@auteurs.option (dest='name', nargs='?', help=u'Nom de la base')
+def bulk (data, name):
+    u'ajout en masse'
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
+
+    try:
+        payload = {'docs' : json.load (data)}
+    except Exception as e:
+        response = {'status': u'error', 'code': 400, 'msg': {'reason': str(e)}}
+        return json.dumps (response, indent=2)
+
+    for author in payload['docs']:
+        author['type'] = 'author'
+        author['_id'] = str(uuid.uuid4())
+
+    db.post ('_bulk_docs', data=payload)
+    return json.dumps (db.status(), indent=2)
 
 @auteurs.option (dest='name', nargs='?', help=u'Nom de la base')
 def remove (name=None):

@@ -12,8 +12,7 @@ from util import util
 def stat ():
     u"Statistiques serveur CouchDB"
     r = requests.get ('http://127.0.0.1:5986/_stats')
-    print util.util()
-
+    return r.json()
 
 @bases.option (dest='name', nargs='?', help=u'Nom de la base')
 def create (name=None):

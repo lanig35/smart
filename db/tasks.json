@@ -15,7 +15,7 @@
     "byStatus": {
 	"map": "function(doc) {if (doc.type == 'task') emit(doc.status, 1);}",
 	"reduce": "_sum"
-    }
+    },
     "byCategory": {
 	"map": "function(doc) {if (doc.type == 'task') emit(doc.category, 1);}",
 	"reduce": "_sum"

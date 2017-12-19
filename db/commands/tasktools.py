@@ -6,6 +6,7 @@ import requests, json, uuid, random
 from faker import Faker, providers
 from slugify import slugify
 from prettytable import PrettyTable
+import argparse
 
 from util import util
 
@@ -16,32 +17,17 @@ class StatusProvider (providers.BaseProvider):
         return random.choice (status)
 
 @taches.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help=u'Nombre tâches à créer')
-@taches.option (dest='name', nargs='?', help=u'Nom de la base')
+@taches.option (dest='name', metavar='db', nargs='?', help=u'Nom de la base')
 def init (count, name=None):
     u"création de tâches exemples"
-    config = current_app.config.get_namespace ('COUCHDB_')
-    
-    # récupération nom de la base
-    db = name if name is not None else config.get ('task_db')
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
 
-    if db is None:
-        response = {'status': 'error', 'code': 400, 'msg': {'error': u'bad request', 'reason': u'missing DB name'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
-    # préparation requête
-    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    url = config.get('url') + db + '/'
-
-    r = requests.head (url, headers=headers)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': 404, 'msg': {'error': u'not found', 'reason': 'database does not exist'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
-    # génération des tâches
+    # création de tâches
     factory = Faker ('fr_FR')
     factory.add_provider (StatusProvider)
+
     for i in range (0, count):
         title = factory.sentence (nb_words=3)
         payload = {
@@ -53,14 +39,11 @@ def init (count, name=None):
                 "status": factory.status(),
                 "description": factory.paragraph (nb_sentences=1)
                 }
-        doc = url + str (uuid.uuid4())
-        r = requests.put (doc, headers=headers, data=json.dumps(payload))
-        if r.status_code != 201 and r.status_code != 202:
-            response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
-            current_app.config['logger'].error (response)
-            return json.dumps (response, indent=2)
 
-    response = {'status': 'ok', 'code': 200, 'msg': {'result': count, 'name': db}}
+        if not db.put (str(uuid.uuid4()), data=payload):
+            return json.dumps (db.status(), indent=2)
+
+    response = {'status': 'ok', 'code': 200, 'msg': {'result': count}}
     current_app.config['logger'].info (response)
     return json.dumps (response, indent=2)
 
@@ -70,27 +53,9 @@ def init (count, name=None):
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def list (f, count, filter, name=None):
     u"liste les tâches"
-    print filter
-
-    config = current_app.config.get_namespace ('COUCHDB_')
-    
-    # récupération nom de la base
-    db = name if name is not None else config.get ('task_db')
-
-    if db is None:
-        response = {'status': 'error', 'code': 400, 'msg': {'error': u'bad request', 'reason': u'missing DB name'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
-    # préparation requête
-    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    url = config.get('url') + db + '/'
-
-    r = requests.head (url, headers=headers)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': 404, 'msg': {'error': u'not found', 'reason': 'database does not exist'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
 
     # récupération des documents
     params = {
@@ -99,38 +64,32 @@ def list (f, count, filter, name=None):
             }
 
     if filter == 'prio':
-        target = url + '_design/tasks/_view/byPriority'
+        target = '_design/tasks/_view/byPriority'
         params ['key']='"low"'
         params ['reduce'] = False 
     else:
-        target = url + '_design/tasks/_view/byId'
+        target = '_design/tasks/_view/byId'
 
-    print target 
-    print params
-
-    r = requests.get (target, headers=headers, params= params)
-    print r.url
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    view = db.get (target, params)
+    if view is None:
+        return json.dumps (db.status(), indent=2)
 
     data = []
     table = PrettyTable (['id', 'title', 'category', 'status', 'priority'])
 
-    for item in r.json()['rows']:
-        r = requests.get (url + item['id'], headers=headers)
+    for task in view['rows']:
+        doc = db.get (task['id'])
 
         data.append (
                 {
-                    'id' : r.json()['_id'],
-                    'title': r.json()['title'],
-                    'category': r.json()['category'],
-                    'status': r.json()['status'],
-                    'priority': r.json()['priority']
+                    'id' : doc['_id'],
+                    'title': doc['title'],
+                    'category': doc['category'],
+                    'status': doc['status'],
+                    'priority': doc['priority']
                 }
             )
-        table.add_row([r.json()['_id'], r.json()['title'], r.json()['category'], r.json()['status'], r.json()['priority']])
+        table.add_row([doc['_id'], doc['title'], doc['category'], doc['status'], doc['priority']])
 
     if f == 'table':
         return table
@@ -138,10 +97,56 @@ def list (f, count, filter, name=None):
     sortie = {'total': 10, 'count': 10, 'tasks': data}
     return json.dumps (sortie, indent=2)
 
-@taches.option (dest='name', nargs='?', help=u'Nom de la base')
-def add (count, name=None):
+@taches.option ('-p', '--prio', dest='prio', choices=['low', 'medium', 'high'], default='medium')
+@taches.option ('-c', '--cat', dest='cat', default='default')
+@taches.option ('-d', '--db', dest='name', default=None, help=u'Nom de la base')
+@taches.option (dest='title', nargs=argparse.REMAINDER, help=u'titre')
+def add (prio, cat, name, title):
     u"ajout d'une tâche"
-    pass
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
+
+    payload = {
+            "type": "task",
+            "title": ' '.join(title),
+            "slug": '-'.join (title),
+            "category": cat,
+            "priority": prio,
+            "status": u'new'
+                }
+
+    key = str(uuid.uuid4())
+    if not db.put (key, data=payload):
+        return json.dumps (db.status(), indent=2)
+
+    response = {'status': 'ok', 'code': 200, 'msg': {'result': u'created', 'id': key}}
+    current_app.config['logger'].info (response)
+    return json.dumps (response, indent=2)
+
+@taches.option ('-i', '--input', dest='data', type=argparse.FileType ('r'), required=True, help=u'fichier de donneés')
+@taches.option (dest='name', nargs='?', help=u'Nom de la base')
+def bulk (data, name):
+    u'ajout en masse'
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
+
+    try:
+        payload = {'docs' : json.load (data)}
+    except Exception as e:
+        response = {'status': u'error', 'code': 400, 'msg': {'reason': str(e)}}
+        return json.dumps (response, indent=2)
+
+    for task in payload['docs']:
+        task['type'] = 'task'
+        task['slug'] = slugify (task['title'])
+        task['_id'] = str(uuid.uuid4())
+
+    print payload
+
+    db.post ('_bulk_docs', data=payload)
+    return json.dumps (db.status(), indent=2) 
 
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def remove (name=None):
