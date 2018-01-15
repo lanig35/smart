@@ -1,16 +1,35 @@
 {
-  "_id": "_design/authors",
+  "_id": "_design/auteurs",
   "language": "javascript",
   "views": {
-    "byId": {
-      "map": "function(doc) {if (doc.type == 'author') emit(doc._id, doc.name);}"
+    "parId": {
+      "map": "function(doc) {if (doc.type == 'auteur') emit(doc._id, doc.nom);}"
     },
-    "byName": {
-      "map": "function(doc) {if (doc.type == 'author') emit(doc.name, null);}"
+    "parNom": {
+      "map": "function(doc) {if (doc.type == 'auteur') emit(doc.nom, null);}"
     },
-    "byCountry": {
-	"map": "function(doc) {if (doc.type == 'author') emit(doc.country, 1);}",
-	"reduce": "_sum"
+    "parPays": {
+	"map": "function(doc) {if (doc.type == 'auteur') emit(doc.pays, 1);}",
+	"reduce": "_count"
+    },
+    "parGenre": {
+	"map": "function(doc) {if (doc.type == 'auteur' && doc.genres) {doc.genres.forEach(function(genre) {emit (genre, 1);});}}",
+	"reduce": "_count"
+    },
+    "parSlug": {
+	"map": "function(doc) {if (doc.type == 'auteur') emit(doc.slug, 1);}"
+    },
+    "parLangue": {
+	"map": "function(doc) {if (doc.type == 'auteur') emit(doc.langue, 1);}",
+	"reduce": "_count"
+    },
+    "parSexe": {
+	"map": "function(doc) {if (doc.type == 'auteur') emit(doc.sexe, 1);}",
+	"reduce": "_count"
+    },
+    "parAnnee": {
+	"map": "function(doc) {if (doc.type == 'auteur') emit(doc.naissance, 1);}",
+	"reduce": "_count"
     }
   }
 }

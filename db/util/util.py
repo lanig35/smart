@@ -34,8 +34,6 @@ class Couchdb:
 
     def get (self, key, params=None):
         r = requests.get (self.url + key, headers=self.headers, params=params)
-        print params
-        print r.url
         if r.status_code != 200:
             self.state = {'status': u'error', 'code': r.status_code, 'msg': r.json()}
             current_app.config['logger'].error (self.state)

@@ -1,0 +1,363 @@
+[
+	{
+		"nom": "nothomb",
+		"prenom": "amélie",
+		"sexe": "F",
+		"pays": "belgique",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1966,
+		"url": "https://fr.wikipedia.org/wiki/Am%C3%A9lie_Nothomb",
+		"prix": [{"nom": "Académie françasie", "annee": 1999}]
+	},
+	{
+		"nom": "queneau",
+		"prenom": "raymond",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman", "poésie"],
+		"naissance": 1903,
+		"deces": 1976,
+		"url": "https://fr.wikipedia.org/wiki/Raymond_Queneau"
+	},
+	{
+		"nom": "quadruppani",
+		"prenom": "serge",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier"],
+		"naissance": 1952,
+		"url": "https://fr.wikipedia.org/wiki/Serge_Quadruppani"
+	},
+	{
+		"nom": "coben",
+		"prenom": "harlan",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier", "thriller"],
+		"naissance": 1962,
+		"url": "https://fr.wikipedia.org/wiki/Harlan_Coben"
+	},
+	{
+		"nom": "pennac",
+		"prenom": "daniel",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1944,
+		"url": "https://fr.wikipedia.org/wiki/Daniel_Pennac",
+		"prix": [{"nom":"Renaudot","annee":2007},{"nom": "Livre Inter", "annee":1990}]
+	},
+	{
+		"nom": "hawes",
+		"prenom": "james",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres":["roman"],
+		"naissance": 1960
+	},
+	{
+		"nom": "coloane",
+		"prenom": "francisco",
+		"sexe": "H",
+		"pays": "chili",
+		"langue": "espagnol",
+		"genres": ["roman", "nouvelles"],
+		"naissance": 1910,
+		"deces": 2002,
+		"url": "https://fr.wikipedia.org/wiki/Francisco_Coloane"
+	},
+	{
+		"nom": "steinbeck",
+		"prenom": "john",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance": 1902,
+		"deces":198,
+		"url": "https://fr.wikipedia.org/wiki/John_Steinbeck",
+		"prix": [{"nom": "Pulitzer", "annee":1940},{"nom": "Nobel littérature","annee":1962}]
+	},
+	{
+		"nom": "Valdés",
+		"prenom": "zoé",
+		"sexe": "F",
+		"pays": "cuba",
+		"langue": "espagnol",
+		"genres":["fiction", "poésie"],
+		"naissance": 1959,
+		"url": "https://fr.wikipedia.org/wiki/Zo%C3%A9_Vald%C3%A9s"
+	},
+	{
+		"nom": "somerset maugham",
+		"prenom": "william",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman", "espionnage", "théatre"],
+		"naissance": 1874,
+		"deces":1965,
+		"url": "https://fr.wikipedia.org/wiki/William_Somerset_Maugham"
+	},
+	{
+		"nom": "Hélias",
+		"prenom": "pierre-jakez",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman", "ethnographie"],
+		"naissance":1914,
+		"deces":1995,
+		"url": "https://fr.wikipedia.org/wiki/Pierre-Jakez_H%C3%A9lias"
+	},
+	{
+		"nom": "brekilien",
+		"prenom": "yann",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman", "ethnographie"],
+		"naissance": 1920,
+		"deces": 2009,
+		"url": "https://fr.wikipedia.org/wiki/Yann_Brekilien"
+	},
+	{
+		"nom": "grisolia",
+		"prenom": "michel",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["policier"],
+		"naissance": 1948,
+		"deces": 2005,
+		"url": "https://fr.wikipedia.org/wiki/Michel_Grisolia"
+	},
+	{
+		"nom": "salabert",
+		"prenom": "juana",
+		"sexe": "F",
+		"pays": "france",
+		"langue": "espagnol",
+		"genres": ["histoire", "roman"],
+		"naissance": 1962,
+		"url": "https://fr.wikipedia.org/wiki/Juana_Salabert"
+	},
+	{
+		"nom": "McLiam Wilson",
+		"prenom": "robert",
+		"sexe": "H",
+		"pays": "Irlande du Nord",
+		"langue": "anglais britannique",
+		"genres":["roman", "fiction"],
+		"naissance": 1964,
+		"url": "https://fr.wikipedia.org/wiki/Robert_McLiam_Wilson"
+	},
+	{
+		"nom": "irving",
+		"prenom": "john",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["roman", "fiction"],
+		"naissance": 1942,
+		"url": "https://fr.wikipedia.org/wiki/John_Irving"
+	},
+	{
+		"nom": "ludlum",
+		"prenom": "robert",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["espionnage"],
+		"naissance": 1927,
+		"deces":2001,
+		"url": "https://fr.wikipedia.org/wiki/Robert_Ludlum"
+	},
+	{
+		"nom": "O'Connor",
+		"prenom": "joseph",
+		"sexe": "H",
+		"pays": "irlande",
+		"langue": "anglais britannique",
+		"genres": ["roman"],
+		"naissance": 1963,
+		"url": "https://fr.wikipedia.org/wiki/Joseph_O%27Connor"
+	},
+	{
+		"nom":"bouissoux",
+		"prenom": "julien",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1975
+	},
+	{
+		"nom": "levi",
+		"prenom": "primo",
+		"sexe": "H",
+		"pays": "italie",
+		"langue": "italien",
+		"genres":["roman"],
+		"naissance": 1919,
+		"deces": 1987,
+		"url": "https://fr.wikipedia.org/wiki/Primo_Levi"
+	},
+	{
+		"nom": "levy",
+		"prenom": "marc",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Marc_Levy"
+	},
+	{
+		"nom": "Nex\u00F8",
+		"prenom": "martin andersen",
+		"sexe": "H",
+		"pays": "danemark",
+		"langue": "danois",
+		"genres":["roman"],
+		"naissance": 1869,
+		"deces": 1954
+	},
+	{
+		"nom": "carrère",
+		"prenom": "emmanuel",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Emmanuel_Carr%C3%A8re",
+		"prix":[{"nom": "Renaudot", "annee": 2011}]
+	},
+	{
+		"nom": "ellroy",
+		"prenom": "james",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["policier","noir"],
+		"naissance":1948,
+		"url":"https://fr.wikipedia.org/wiki/James_Ellroy"
+	},
+	{
+		"nom": "süskind",
+		"prenom": "patrick",
+		"sexe":"H",
+		"pays": "Allemagne",
+		"langue": "allemand",
+		"genres": ["roman","théatre"],
+		"naissance":1949,
+		"url": "https://fr.wikipedia.org/wiki/Patrick_S%C3%BCskind"
+	},
+	{
+		"nom": "Eco",
+		"prenom": "umberto",
+		"sexe":"H",
+		"pays": "italie",
+		"langue": "italien",
+		"genres":["roman"],
+		"naissance": 1932,
+		"deces":2016,
+		"url": "https://fr.wikipedia.org/wiki/Umberto_Eco"
+	},
+	{
+		"nom": "Larsson",
+		"prenom": "stieg",
+		"sexe":"H",
+		"pays": "suède",
+		"langue": "suédois",
+		"genres":["policier"],
+		"naissance":1954,
+		"url": "https://fr.wikipedia.org/wiki/Stieg_Larsson"
+	},
+	{
+		"nom": "ghosh",
+		"prenom": "amitav",
+		"sexe": "H",
+		"pays": "indes",
+		"langue": "anglais britannique",
+		"genres":["roman"],
+		"naissance":1956,
+		"url": "https://fr.wikipedia.org/wiki/Amitav_Ghosh"
+	},
+	{
+		"nom": "pàmies",
+		"prenom": "sergi",
+		"sexe":"H",
+		"pays": "espagne",
+		"langue": "catalan",
+		"genres":["roman","nouvelles"],
+		"naissance": 1960,
+		"url": "https://fr.wikipedia.org/wiki/Sergi_P%C3%A0mies"
+	},
+	{
+		"nom": "charyn",
+		"prenom": "jerome",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["policier", "nouvelles"],
+		"naissance":1937,
+		"url": "https://fr.wikipedia.org/wiki/Jerome_Charyn"
+	},
+	{
+		"nom": "gille",
+		"prenom": "élisabeth",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman","policier"],
+		"naissance":1937,
+		"deces":1996,
+		"url": "https://fr.wikipedia.org/wiki/%C3%89lisabeth_Gille"
+	},
+	{
+		"nom": "kongoli",
+		"prenom": "fatos",
+		"sexe":"H",
+		"pays": "albanie",
+		"langue": "albanais",
+		"genres":["roman"],
+		"naissance":1944
+	},
+	{
+		"nom":"Coen",
+		"prenom": "ethan",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 1957
+	},
+	{
+		"nom": "ford",
+		"prenom": "g.m;",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier", "thriller"],
+		"naissance": 1945
+	},
+	{
+		"nom": "ishiguro",
+		"prenom": "kazuo",
+		"sexe":"H",
+		"pays":"japon",
+		"langue":"anglais britannique",
+		"genres":["roman", "nouvelles"],
+		"naissance":1954,
+		"url":"https://fr.wikipedia.org/wiki/Kazuo_Ishiguro",
+		"prix":[{"nom":"Nobel littérature","annee":2017},{"nom":"Booker prize","annee":1989}]
+	}
+]

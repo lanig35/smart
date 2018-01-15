@@ -1,0 +1,307 @@
+[
+	{
+		"nom": "hagen",
+		"prenom": "george",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 1958
+	},
+	{
+		"nom": "dubillard",
+		"prenom": "roland",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["nouvelles", "théatre"],
+		"naissance": 1923,
+		"deces":2011,
+		"url":"https://fr.wikipedia.org/wiki/Roland_Dubillard"
+	},
+	{
+		"nom": "cueco",
+		"prenom": "henri",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["divers"],
+		"naissance": 1929,
+		"deces": 2017,
+		"url": "https://fr.wikipedia.org/wiki/Henri_Cueco"
+	},
+	{
+		"nom": "K. Dick",
+		"prenom": "philip",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["science-fiction", "fantastique"],
+		"naissance": 1928,
+		"deces": 1982,
+		"url": "https://fr.wikipedia.org/wiki/Philip_K._Dick"
+	},
+	{
+		"nom": "westlake",
+		"prenom": "donald",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["noir", "policier", "humour"],
+		"serie": "John Dortmunder",
+		"naissance": 1933,
+		"deces": 2008,
+		"url": "https://fr.wikipedia.org/wiki/Donald_E._Westlake"
+	},
+	{
+		"nom": "connelly",
+		"prenom": "michael",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"serie": "Inspecteur Harry Bosch",
+		"naissance": 1956,
+		"url": "https://fr.wikipedia.org/wiki/Michael_Connelly"
+	},
+	{
+		"nom": "Hassel",
+		"prenom": "sven",
+		"sexe": "H",
+		"pays": "danemark",
+		"langue": "danois",
+		"genres": ["guerre"],
+		"naissance": 1917,
+		"deces": 2012,
+		"url": "https://fr.wikipedia.org/wiki/Sven_Hassel"
+	},
+	{
+		"nom": "H\u00F8eg",
+		"prenom": "peter",
+		"sexe": "H",
+		"pays": "danemark",
+		"langue": "danois",
+		"genres": ["policier", "noir", "roman"],
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Peter_H%C3%B8eg"
+	},
+	{
+		"nom": "Littell",
+		"prenom": "jonathan",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "français",
+		"genres": ["roman", "science-fiction"],
+		"naissance": 1967,
+		"url": "https://fr.wikipedia.org/wiki/Jonathan_Littell"
+	},
+	{
+		"nom": "Qiu",
+		"prenom": "Xiaolong",
+		"sexe": "H",
+		"pays": "chine",
+		"langue": "anglais",
+		"genres": ["policier"],
+		"naissance": 1953,
+		"url": "https://fr.wikipedia.org/wiki/Qiu_Xiaolong"
+	},
+	{
+		"nom": "Nunn",
+		"prenom": "kem",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["policier"],
+		"naissance": 1948,
+		"url": "https://fr.wikipedia.org/wiki/Kem_Nunn"
+	},
+	{
+		"nom": "Palma",
+		"prenom": "felix J.",
+		"sexe": "H",
+		"pays": "espagne",
+		"langue": "espagnol",
+		"genres":["roman"],
+		"naissance": 1968,
+		"url": "https://fr.wikipedia.org/wiki/F%C3%A9lix_J._Palma"
+	},
+	{
+		"nom": "Constantine",
+		"prenom": "barbara",
+		"sexe": "F",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1955
+	},
+	{
+		"nom": "ball",
+		"prenom": "toby",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"naissance": 0
+	},
+	{
+		"nom": "raven",
+		"prenom": "simon",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman"],
+		"naissance": 1927,
+		"deces": 2001
+	},
+	{
+		"nom":"Rankin",
+		"prenom": "Ian",
+		"sexe": "H",
+		"pays": "écosse",
+		"langue": "anglais britannique",
+		"genres": ["policier"],
+		"serie": "Inspecteur John Rebus",
+		"naissance": 1960,
+		"url": "https://fr.wikipedia.org/wiki/Ian_Rankin"
+	},
+	{
+		"nom": "Pancol",
+		"prenom": "katherine",
+		"sexe": "F",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1954,
+		"url": "https://fr.wikipedia.org/wiki/Katherine_Pancol"
+	},
+	{
+		"nom": "boyd",
+		"prenom": "william",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman", "nouvelles"],
+		"naissance": 1952,
+		"url": "https://fr.wikipedia.org/wiki/William_Boyd_(%C3%A9crivain)"
+	},
+	{
+		"nom": "tyler",
+		"prenom": "l.c.",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["policier", "humour", "histoire"],
+		"naissance": 1960,
+		"url": "https://fr.wikipedia.org/wiki/L.C._Tyler"
+	},
+	{
+		"nom": "erre",
+		"prenom": "j.m.",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1971,
+		"url": "https://fr.wikipedia.org/wiki/J.M._Erre"
+	},
+	{
+		"nom": "dugain",
+		"prenom": "marc",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Marc_Dugain"
+	},
+	{
+		"nom": "carrière",
+		"prenom": "jean-claude",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman", "contes", "théatre"],
+		"naissance": 1931,
+		"url": "https://fr.wikipedia.org/wiki/Jean-Claude_Carri%C3%A8re"
+	},
+	{
+		"nom": "chabon",
+		"prenom": "michael",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 1963,
+		"url": "https://fr.wikipedia.org/wiki/Michael_Chabon"
+	},
+	{
+		"nom": "kennedy",
+		"prenom": "douglas",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 1955,
+		"url": "https://fr.wikipedia.org/wiki/Douglas_Kennedy"
+	},
+	{
+		"nom": "teulé",
+		"prenom": "jeaan",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1953,
+		"url": "https://fr.wikipedia.org/wiki/Jean_Teul%C3%A9"
+	},
+	{
+		"nom": "monfils",
+		"prenom": "nadine",
+		"sexe": "F",
+		"pays": "belgique",
+		"langue": "français",
+		"genres":["policier"],
+		"naissance": 1953,
+		"url": "https://fr.wikipedia.org/wiki/Nadine_Monfils"
+	},
+	{
+		"nom": "kourkov",
+		"prenom": "andreï",
+		"sexe": "H",
+		"pays": "russie",
+		"langue": "russe",
+		"genres": ["roman"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Andre%C3%AF_Kourkov"
+	},
+	{
+		"nom": "johnson",
+		"prenom": "craig",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Craig_Johnson_(%C3%A9crivain)"
+	},
+	{
+		"nom": "cleave",
+		"prenom": "paul",
+		"sexe": "H",
+		"pays": "nouvelle-zélande",
+		"langue": "anglais australien",
+		"genres": ["policier"],
+		"naissance": 1974,
+		"url": "https://fr.wikipedia.org/wiki/Paul_Cleave"
+	},
+	{
+		"nom": "Kallentoft",
+		"prenom": "mons",
+		"sexe": "H",
+		"pays": "suède",
+		"langue": "suédois",
+		"genres":["policier"],
+		"naissance": 1968,
+		"url": "https://fr.wikipedia.org/wiki/Mons_Kallentoft]"
+	}
+]

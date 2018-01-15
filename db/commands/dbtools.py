@@ -9,14 +9,14 @@ from datetime import datetime
 from util import util
 
 @bases.command
-def stat ():
+def info ():
     u"Statistiques serveur CouchDB"
     r = requests.get ('http://127.0.0.1:5986/_stats')
     return r.json()
 
 @bases.option (dest='name', nargs='?', help=u'Nom de la base')
-def create (name=None):
-    u"creation de base"
+def creer (name=None):
+    u"création de base"
     config = current_app.config.get_namespace('COUCHDB_')
 
     # récupération nom de la base
@@ -77,7 +77,7 @@ def create (name=None):
     return json.dumps (response, indent=2)
 
 @bases.option (dest='name', nargs='?', help=u'Database name')
-def delete (name=None):
+def supprimer (name=None):
     u"Suppression base"
     config = current_app.config.get_namespace ('COUCHDB_')
     
@@ -108,44 +108,59 @@ def delete (name=None):
 
 @bases.option ('-f', '--format', dest='f', choices=['json','table'], default='json', help=u'format de sortie')
 @bases.option (dest='name', nargs='?', help=u'nom de la base')
-def info (f, name=None):
+def lister (f, name=None):
     u"info base"
     config = current_app.config.get_namespace ('COUCHDB_')
     
     # récupération nom de la base
     db = name if name is not None else config.get ('db')
 
-    if db is None:
-        response = {'status': 'error', 'code': 400, 'msg': {'error': u'bad request', 'reason': u'missing DB name'}}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
-
     # préparation requête
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-    url = config.get('url') + db
 
-    # récupération des infos
-    r = requests.get (url, headers=headers)
-    if r.status_code != 200:
-        response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
-        current_app.config['logger'].error (response)
-        return json.dumps (response, indent=2)
+    base = []
+    if db is None:
+        url = config.get('url') + '_all_dbs'
+        r = requests.get (url, headers=headers)
 
-    current_app.config['logger'].info (db)
+        if r.status_code != 200:
+            response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
+            current_app.config['logger'].error (response)
+            return json.dumps (response, indent=2)
+        
+        base = r.json()
+    else:
+        base.append(db)
 
-    data = r.json()
-    db = {}
-    db ['name'] = data['db_name']
-    db ['docs'] = data['doc_count']
-    db ['deleted'] = data['doc_del_count']
-    db ['size'] = data['data_size']
-    db ['disk'] = data['disk_size']
-    db ['opened'] = datetime.fromtimestamp (float(data['instance_start_time'])/1000000).strftime('%d %m %Y')
+    info = []
+    for item in base:
+        if not item.startswith ('_'):
+            url = config.get('url') + item 
+
+            # récupération des infos
+            r = requests.get (url, headers=headers)
+            if r.status_code != 200:
+                response = {'status': 'error', 'code': r.status_code, 'msg': r.json()}
+                current_app.config['logger'].error (response)
+                return json.dumps (response, indent=2)
+
+            current_app.config['logger'].info (item)
+
+            data = r.json()
+            db = {}
+            db ['nom'] = data['db_name']
+            db ['docs'] = data['doc_count']
+            db ['suppr'] = data['doc_del_count']
+            db ['taille'] = data['data_size']
+            db ['disque'] = data['disk_size']
+
+            info.append (db)
 
     if f == 'json':
-      return json.dumps (db)
+      return json.dumps (info, indent=2)
 
-    table = PrettyTable (['name', 'docs', 'deleted', 'size', 'disk', 'opened'])
-    table.add_row ([db['name'], db['docs'], db['deleted'], db['size'], db['disk'], db['opened']])
+    table = PrettyTable (['nom', 'docs', 'suppr', 'taille', 'disque'])
+    for db in info:
+        table.add_row ([db['nom'], db['docs'], db['suppr'], db['taille'], db['disque']])
     return table
 

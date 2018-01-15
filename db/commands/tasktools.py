@@ -16,10 +16,10 @@ class StatusProvider (providers.BaseProvider):
         status = [u'new', u'done', u'canceled', u'ongoing']
         return random.choice (status)
 
-@taches.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help=u'Nombre tâches à créer')
+@taches.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help='Nombre tâches à créer')
 @taches.option (dest='name', metavar='db', nargs='?', help=u'Nom de la base')
 def init (count, name=None):
-    u"création de tâches exemples"
+    "création de tâches exemples"
     db = util.Couchdb (name)
     if not db.valid ():
         return json.dumps (db.status(), indent=2)
@@ -48,11 +48,11 @@ def init (count, name=None):
     return json.dumps (response, indent=2)
 
 @taches.option ('-f', '--format', dest='f', choices=['json','table'], default='json', help=u'format de sortie')
-@taches.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help=u'Nombre tâches à créer')
-@taches.option ('--filter', dest='filter', metavar='filter', default=None, help=u'Filtrage des tâches')
+@taches.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help='Nombre tâches à créer')
+@taches.option ('--filter', dest='filter', metavar='filter', default=None, help='Filtrage des tâches')
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def list (f, count, filter, name=None):
-    u"liste les tâches"
+    "liste les tâches"
     db = util.Couchdb (name)
     if not db.valid ():
         return json.dumps (db.status(), indent=2)
@@ -102,7 +102,7 @@ def list (f, count, filter, name=None):
 @taches.option ('-d', '--db', dest='name', default=None, help=u'Nom de la base')
 @taches.option (dest='title', nargs=argparse.REMAINDER, help=u'titre')
 def add (prio, cat, name, title):
-    u"ajout d'une tâche"
+    "ajout d'une tâche"
     db = util.Couchdb (name)
     if not db.valid ():
         return json.dumps (db.status(), indent=2)
@@ -124,7 +124,7 @@ def add (prio, cat, name, title):
     current_app.config['logger'].info (response)
     return json.dumps (response, indent=2)
 
-@taches.option ('-i', '--input', dest='data', type=argparse.FileType ('r'), required=True, help=u'fichier de donneés')
+@taches.option ('-i', '--input', dest='data', type=argparse.FileType ('r'), required=True, help='fichier de donneés')
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def bulk (data, name):
     u'ajout en masse'
@@ -150,10 +150,10 @@ def bulk (data, name):
 
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def remove (name=None):
-    u"suppression de tâches"
+    "suppression de tâches"
     pass
 
 @taches.option (dest='name', nargs='?', help=u'Nom de la base')
 def search (name=None):
-    u"recherche de tâches"
+    "recherche de tâches"
     pass

@@ -1,0 +1,193 @@
+[
+	{
+		"nom": "colize",
+		"prenom":"paul",
+		"sexe":"H",
+		"pays":"belgique",
+		"langue":"français",
+		"genres":["policier"],
+		"naissance":1953,
+		"url":"https://fr.wikipedia.org/wiki/Paul_Colize"
+	},
+	{
+		"nom": "coulonges",
+		"prenom":"henri",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1936,
+		"url":"https://fr.wikipedia.org/wiki/Henri_Coulonges"
+	},
+	{
+		"nom":"goddard",
+		"prenom":"robert",
+		"sexe":"H",
+		"pays":"angleterre",
+		"langue":"anglais britannique",
+		"genres":["policier"],
+		"naissance":1954,
+		"url":"https://fr.wikipedia.org/wiki/Robert_Goddard_(romancier)"
+	},
+	{
+		"nom":"hannf",
+		"prenom":"helene",
+		"sexe":"F",
+		"pays":"états-unis",
+		"langue":"anglais américain",
+		"genres":["epistolaire"],
+		"naissance":1916,
+		"deces":1997,
+		"url":"https://fr.wikipedia.org/wiki/Helene_Hanff"
+	},
+	{
+		"nom":"dubois",
+		"prenom": "jean-paul",
+		"sexe":"H",
+		"pays": "france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1950,
+		"url":"https://fr.wikipedia.org/wiki/Jean-Paul_Dubois",
+		"prix":[{"nom":"Femina","annee":2004}]
+	},
+	{
+		"nom":"Poe",
+		"prenom": "edgar allan",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["policier","fantastique"],
+		"naissance": 1809,
+		"deces":1849,
+		"url":"https://fr.wikipedia.org/wiki/Edgar_Allan_Poe"
+	},
+	{
+		"nom":"follett",
+		"prenom": "ken",
+		"sexe":"H",
+		"pays": "pays de Galles",
+		"langue": "anglais britannique",
+		"genres":["espionnage"],
+		"naissance":1949,
+		"url":"https://fr.wikipedia.org/wiki/Ken_Follett"
+	},
+	{
+		"nom": "stern",
+		"prenom":"mario rigoni",
+		"sexe":"H",
+		"pays":"italie",
+		"langue":"italien",
+		"genres":["roman"],
+		"naissance":1921,
+		"deces":2008,
+		"url":"https://fr.wikipedia.org/wiki/Mario_Rigoni_Stern"
+	},
+	{
+		"nom": "auster",
+		"prenom": "paul",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance":1947,
+		"url":"https://fr.wikipedia.org/wiki/Paul_Auster"
+	},
+	{
+		"nom":"oster",
+		"prenom": "christian",
+		"sexe":"H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman","policier","enfance"],
+		"naissance":1949,
+		"url":"https://fr.wikipedia.org/wiki/Christian_Oster",
+		"prix":[{"nom":"Medecis","annee":1999}]
+	},
+	{
+		"nom":"hayter",
+		"prenom":"sparkle",
+		"sexe":"F",
+		"pays":"canada",
+		"langue": "anglais canadien",
+		"genres":["policier","humour"],
+		"naissance":1958,
+		"url":"https://fr.wikipedia.org/wiki/Sparkle_Hayter",
+		"prix":[{"nom":"Arthur-Ellis", "annee":1995}]
+	},
+	{
+		"nom":"tartt",
+		"prenom":"donna",
+		"sexe":"F",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance":1963,
+		"url":"https://fr.wikipedia.org/wiki/Donna_Tartt"
+	},
+	{
+		"nom": "janet",
+		"prenom":"evanovich",
+		"sexe":"F",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["policier","humour"],
+		"naissance":1943,
+		"url":"https://fr.wikipedia.org/wiki/Janet_Evanovich"
+	},
+	{
+		"nom":"sansom",
+		"prenom":"c.j.",
+		"sexe":"H",
+		"pays":"écosse",
+		"langue":"anglais britannique",
+		"genres":["policier"],
+		"naissance":1952,
+		"url":"https://fr.wikipedia.org/wiki/C._J._Sansom"
+	},
+	{
+		"nom":"albom",
+		"prenom":"mitch",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance":1958,
+		"url":"https://fr.wikipedia.org/wiki/Mitch_Albom"
+	},
+	{
+		"nom":"traven",
+		"prenom":"b.",
+		"sexe":"H",
+		"pays": "allemagne",
+		"langue":"allemand",
+		"genres":["roman"],
+		"naissance":1882,
+		"deces":1969,
+		"url":"https://fr.wikipedia.org/wiki/B._Traven"
+	},
+	{
+		"nom":"roth",
+		"prenom":"joseph",
+		"sexe":"H",
+		"pays":"autriche",
+		"langue": "allemand",
+		"genres":["roman"],
+		"naissance":1894,
+		"deces":1939,
+		"url":"https://fr.wikipedia.org/wiki/Joseph_Roth"
+	},
+	{
+		"nom":"vautrin",
+		"prenom":"jean",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman", "policier", "aventure"],
+		"naissance":1933,
+		"deces":2015,
+		"url": "https://fr.wikipedia.org/wiki/Jean_Vautrin",
+		"prix":[{"nom":"Goncourt","annee":1989}]
+	}
+]
+

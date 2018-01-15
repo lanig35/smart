@@ -1,0 +1,400 @@
+[
+	{
+		"nom": "férey",
+		"prenom": "caryl",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier"],
+		"naissance": 1967,
+		"url": "https://fr.wikipedia.org/wiki/Caryl_F%C3%A9rey"
+	},
+	{
+		"nom": "shipstead",
+		"prenom": "maggie",
+		"sexe": "F",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance":1983
+	},
+	{
+		"nom": "le guilcher",
+		"prenom": "arnaud",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance":1974,
+		"url": "https://fr.wikipedia.org/wiki/Arnaud_Le_Guilcher"
+	},
+	{
+		"nom": "lovecraft",
+		"prenom": "h.p.",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["science-fiction", "épouvante"],
+		"naissance":1890,
+		"deces":1937,
+		"url": "https://fr.wikipedia.org/wiki/Howard_Phillips_Lovecraft"
+	},
+	{
+		"nom": "jerome",
+		"prenom": "k. jerome",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["humour"],
+		"naissance":1859,
+		"deces": 1927,
+		"url": "https://fr.wikipedia.org/wiki/Jerome_K._Jerome"
+	},
+	{
+		"nom": "henderson",
+		"prenom": "lauren",
+		"sexe": "F",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["policier", "humour", "enfance"],
+		"naissance":1966,
+		"url": "https://fr.wikipedia.org/wiki/Lauren_Henderson"
+	},
+	{
+		"nom": "dicker",
+		"prenom": "joël",
+		"sexe": "H",
+		"pays": "suisse",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance":1985,
+		"url": "https://fr.wikipedia.org/wiki/Jo%C3%ABl_Dicker"
+	},
+	{
+		"nom": "bennett",
+		"prenom": "alan",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman", "théatre"],
+		"naissance":1934,
+		"url": "https://fr.wikipedia.org/wiki/Alan_Bennett"
+	},
+	{
+		"nom": "lewis",
+		"prenom": "roy",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman"],
+		"naissance":1913,
+		"deces":1996,
+		"url": "https://fr.wikipedia.org/wiki/Roy_Lewis"
+	},
+	{
+		"nom": "jackson braun",
+		"prenom": "lilian",
+		"sexe": "F",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"naissance": 1913,
+		"deces":2011,
+		"url": "https://fr.wikipedia.org/wiki/Lilian_Jackson_Braun"
+	},
+	{
+		"nom": "fforde",
+		"prenom": "jasper",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["policier"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Jasper_Fforde"
+	},
+	{
+		"nom": "Radge",
+		"prenom": "anne b.",
+		"sexe": "F",
+		"pays": "norvège",
+		"langue": "norvégien",
+		"genres": ["roman"],
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Anne_B._Ragde"
+	},
+	{
+		"nom": "ragougneau",
+		"prenom": "alexis",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1973
+	},
+	{
+		"nom": "carkeet",
+		"prenom": "david",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["roman", "humour"],
+		"naissance": 1946,
+		"url": "https://fr.wikipedia.org/wiki/David_Carkeet"
+	},
+	{
+		"nom": "lodge",
+		"prenom": "david",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman", "humour"],
+		"naissance": 1935,
+		"url": "https://fr.wikipedia.org/wiki/David_Lodge"
+	},
+	{
+		"nom": "mabanckou",
+		"prenom": "alain",
+		"sexe": "H",
+		"pays": "république du congo",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1966,
+		"url": "https://fr.wikipedia.org/wiki/Alain_Mabanckou",
+		"prix": [{"nom": "renaudot", "annee":2006}]
+	},
+	{
+		"nom": "levison",
+		"prenom": "iain",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman", "policier"],
+		"naissance": 1963,
+		"url": "https://fr.wikipedia.org/wiki/Iain_Levison"
+	},
+	{
+		"nom": "kyrö",
+		"prenom": "thomas",
+		"sexe": "H",
+		"pays": "finlande",
+		"langue": "finnois",
+		"genres": ["humour"],
+		"naissance": 0
+	},
+	{
+		"nom": "jonasson",
+		"prenom": "jonas",
+		"sexe": "H",
+		"pays": "suède",
+		"langue": "suédois",
+		"genres": ["roman"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Jonas_Jonasson"
+	},
+	{
+		"nom": "delerm",
+		"prenom": "philippe",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman", "nouvelles"],
+		"naissance": 1950,
+		"url": "https://fr.wikipedia.org/wiki/Philippe_Delerm"
+	},
+	{
+		"nom": "anouilh",
+		"prenom": "jean",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["théatre"],
+		"naissance": 1910,
+		"deces": 1987,
+		"url": "https://fr.wikipedia.org/wiki/Jean_Anouilh"
+	},
+	{
+		"nom": "dahl",
+		"prenom": "roald",
+		"sexe": "H",
+		"pays": "pays de galles",
+		"langue": "anglais britannique",
+		"genres":["enfance", "roman", "nouvelles"],
+		"naissance": 1916,
+		"deces": 1990,
+		"url": "https://fr.wikipedia.org/wiki/Roald_Dahl"
+	},
+	{
+		"nom": "fitzpatrick",
+		"prenom": "becca",
+		"sexe": "F",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 1979,
+		"url": "https://fr.wikipedia.org/wiki/Becca_Fitzpatrick"
+	},
+	{
+		"nom": "yu",
+		"prenom": "hua",
+		"sexe":"H",
+		"pays":"chine",
+		"langue": "chinois",
+		"genres":["roman"],
+		"naissance": 1960,
+		"url": "https://fr.wikipedia.org/wiki/Yu_Hua"
+	},
+	{
+		"nom": "daudet",
+		"prenom": "alphonse",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["contes", "roman", "nouvelles"],
+		"naissance": 1840,
+		"deces": 1897,
+		"url": "https://fr.wikipedia.org/wiki/Alphonse_Daudet"
+	},
+	{
+		"nom": "stewart",
+		"prenom": "amy",
+		"sexe": "F",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman"],
+		"naissance": 0
+	},
+	{
+		"nom": "McCall Smith",
+		"prenom": "alexander",
+		"sexe": "H",
+		"pays": "écosse",
+		"langue": "anglais britannique",
+		"genres":["roman", "enfance", "contes"],
+		"naissance": 1948,
+		"url": "https://fr.wikipedia.org/wiki/Alexander_McCall_Smith"
+	},
+	{
+		"nom": "gide",
+		"prenom": "andré",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genre": ["roman", "théatre"],
+		"naissance": 1869,
+		"deces": 1951,
+		"url": "https://fr.wikipedia.org/wiki/Andr%C3%A9_Gide",
+		"prix": [{"nom": "nobel littérature", "annee":1947}]
+	},
+	{
+		"nom": "pagnol",
+		"prenom": "marcel",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1895,
+		"deces": 1974,
+		"url": "https://fr.wikipedia.org/wiki/Marcel_Pagnol"
+	},
+	{
+		"nom": "melville",
+		"prenom": "herman",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman", "nouvelles", "poésie"],
+		"naissance": 1819,
+		"deces": 1891,
+		"url": "https://fr.wikipedia.org/wiki/Herman_Melville"
+	},
+	{
+		"nom": "perrault",
+		"prenom": "charles",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["contes"],
+		"naissance": 1628,
+		"deces": 1703,
+		"url": "https://fr.wikipedia.org/wiki/Charles_Perrault"
+	},
+	{
+		"nom": "doa",
+		"prenom": "",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["policier"],
+		"naissance": 1968,
+		"url": "https://fr.wikipedia.org/wiki/DOA_(auteur)"
+	},
+	{
+		"nom": "johnsrud",
+		"prenom": "ingar",
+		"sexe": "H",
+		"pays": "norvège",
+		"langue": "norvégien",
+		"naissance": 1974
+	},
+	{
+		"nom": "truc",
+		"prenom": "olivier",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier"],
+		"naissance": 1964,
+		"url": "https://fr.wikipedia.org/wiki/Olivier_Truc",
+		"prix": [{"nom": "michel-Lebrun", "annee": 2013}]
+	},
+	{
+		"nom": "picouly",
+		"prenom": "daniel",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman"],
+		"naissance": 1948,
+		"url": "https://fr.wikipedia.org/wiki/Daniel_Picouly",
+		"prix": [{"nom": "Renaudot", "annee":1999}]
+	},
+	{
+		"nom": "ferrante",
+		"prenom": "elena",
+		"sexe": "F",
+		"pays": "italie",
+		"langue": "italien",
+		"genres": ["roman", "nouvelles", "enfance"],
+		"naissance": 1943,
+		"url": "https://fr.wikipedia.org/wiki/Elena_Ferrante"
+	},
+	{
+		"nom": "wenderberg",
+		"prenom": "annelie",
+		"sexe": "F",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["policier"],
+		"naissance": 0
+	},
+	{
+		"nom": "calbérac",
+		"prenom": "ivan",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["roman", "théatre"],
+		"naissance": 1970
+	},
+	{
+		"nom": "hepard",
+		"prenom": "sam",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["théatre", "nouvelles"],
+		"naissance": 1943,
+		"deces": 2017,
+		"url": "https://fr.wikipedia.org/wiki/Sam_Shepard"
+	}
+]

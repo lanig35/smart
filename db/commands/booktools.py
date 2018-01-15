@@ -6,6 +6,7 @@ import requests, json, uuid, random
 from faker import Faker, providers
 from slugify import slugify
 from prettytable import PrettyTable
+import argparse
 
 from util import util
 
@@ -23,7 +24,7 @@ class GenreProvider (providers.BaseProvider):
 @livres.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help=u'Nombre livres')
 @livres.option (dest='name', nargs='?', help=u'Nom de la base')
 def init (count, name=None):
-    u"création de livres exemples"
+    "création de livres exemples"
     db = util.Couchdb (name)
     if not db.valid ():
         return json.dumps (db.status(), indent=2)
@@ -54,8 +55,8 @@ def init (count, name=None):
     return 'ok'
 
 @livres.option ('-f', '--format', dest='f', choices=['json','table'], default='json', help=u'format de sortie')
-@livres.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help=u'Nombre tâches à créer')
-@livres.option ('--filter', dest='filter', metavar='filter', default=None, help=u'Filtrage des tâches')
+@livres.option ('-c', '--count', dest='count', metavar='#', type=int, default=5, help='Nombre tâches à créer')
+@livres.option ('--filter', dest='filter', metavar='filter', default=None, help='Filtrage des tâches')
 @livres.option (dest='name', nargs='?', help=u'Nom de la base')
 def list (f, count, filter, name=None):
     u"liste des livres"
@@ -107,6 +108,28 @@ def list (f, count, filter, name=None):
 def add (count, name=None):
     u"ajout d'un livre"
     pass
+
+@livres.option ('-i', '--input', dest='data', type=argparse.FileType ('r'), required=True, help=u'fichier de donneés')
+@livres.option (dest='name', nargs='?', help=u'Nom de la base')
+def bulk (data, name):
+    u'ajout en masse'
+    db = util.Couchdb (name)
+    if not db.valid ():
+        return json.dumps (db.status(), indent=2)
+
+    try:
+        payload = {'docs' : json.load (data)}
+    except Exception as e:
+        response = {'status': u'error', 'code': 400, 'msg': {'reason': str(e)}}
+        return json.dumps (response, indent=2)
+
+    for book in payload['docs']:
+        book['type'] = 'book'
+        book['slug'] = slugify (book['title'])
+        book['_id'] = str(uuid.uuid4())
+
+    db.post ('_bulk_docs', data=payload)
+    return json.dumps (db.status(), indent=2)
 
 @livres.option (dest='name', nargs='?', help=u'Nom de la base')
 def remove (name=None):

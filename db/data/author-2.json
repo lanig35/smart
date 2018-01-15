@@ -1,0 +1,181 @@
+[
+	{
+		"nom": "Th\u00F3rainsson",
+		"prenom": "\u00C1rni",
+		"sexe": "H",
+		"pays": "islande",
+		"langue": "islandais",
+		"series": "Einar",
+		"genres": ["policier"],
+		"naissance": 1950, 
+		"url": "https://fr.wikipedia.org/wiki/%C3%81rni_%C3%9E%C3%B3rarinsson"
+	},
+	{
+		"nom": "Marinina",
+		"prenom": "alexandra",
+		"sexe": "F",
+		"pays": "russie",
+		"langue": "russe",
+		"genres": ["policier", "fiction"],
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Alexandra_Marinina"
+	},
+	{	"nom": "j\u00F3nasson",
+		"prenom": "ragnar",
+		"sexe": "H",
+		"pays": "islande",
+		"langue": "islandais",
+		"genres": ["policier", "nouvelles"],
+		"naissance": 1976,
+		"url": "https://fr.wikipedia.org/wiki/Ragnar_J%C3%B3nasson"
+	},
+	{
+		"nom": "V\u00E1zquez montalb\u00E1n",
+		"prenom": "manuel",
+		"sexe": "H",
+		"pays": "espagne",
+		"langue": "espagnol",
+		"genres": ["policier"],
+		"series": ["Pepe Carvalho"],
+		"naissance": 1939,
+		"deces": 2003,
+		"url": "https://fr.wikipedia.org/wiki/Manuel_V%C3%A1zquez_Montalb%C3%A1n"
+	},
+	{
+		"nom": "benacquista",
+		"prenom": "tonino",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier", "roman"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Tonino_Benacquista"
+	},
+	{
+		"nom": "perutz",
+		"prenom": "leo",
+		"sexe": "H",
+		"pays": "autriche",
+		"langue": "allemand",
+		"genres": ["roman", "nouvelles", "théatre"],
+		"naissance": 1882,
+		"deces": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Leo_Perutz"
+	},
+	{
+		"nom": "london",
+		"prenom": "jack",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["aventure"],
+		"naissance": 1876,
+		"deces": 1916,
+		"url": "https://fr.wikipedia.org/wiki/Jack_London"
+	},
+	{
+		"nom": "paasilinna",
+		"prenom": "arto",
+		"sexe": "H",
+		"pays": "finlande",
+		"langue": "finnois",
+		"genres": ["humour"],
+		"naissance": 1942,
+		"url": "https://fr.wikipedia.org/wiki/Arto_Paasilinna"
+	},
+	{
+		"nom": "camilleri",
+		"prenom": "andrea",
+		"sexe": "H",
+		"pays": "italie",
+		"langue": "italien",
+		"genres": ["policier", "roman"],
+		"series": "Commissaire Montalbano",
+		"naissance": 1925,
+		"url": "https://fr.wikipedia.org/wiki/Andrea_Camilleri"
+	},
+	{
+		"nom": "leon",
+		"prenom": "donna",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["policier"],
+		"serie": "Commissaire Brunetti",
+		"sexe": "F",
+		"naissance": 1942,
+		"url": "https://fr.wikipedia.org/wiki/Donna_Leon"
+	},
+	{
+		"nom": "Williams",
+		"prenom": "darren",
+		"sexe": "H",
+		"pays": "australie",
+		"langue": "anglais australien",
+		"genres": ["policier"],
+		"naissance": 1967
+	},
+	{
+		"nom": "block",
+		"prenom": "lawrence",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["policier"],
+		"naissance": 1938,
+		"url": "https://fr.wikipedia.org/wiki/Lawrence_Block"
+	},
+	{
+		"nom": "robinson",
+		"prenom": "peter",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais canadien",
+		"genres": ["policier"],
+		"serie": "Inspecteur Alan banks",
+		"naissance": 1950,
+		"url": "https://fr.wikipedia.org/wiki/Peter_Robinson_(%C3%A9crivain)"
+	},
+	{
+		"nom": "Harstad",
+		"prenom": "donald",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["policier"],
+		"naissance": 1946,
+		"url": "https://fr.wikipedia.org/wiki/Donald_Harstad"
+	},
+	{
+		"nom": "james",
+		"prenom": "p.d.",
+		"sexe": "F",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres" : ["policier"],
+		"naissance": 1920,
+		"deces": 2014,
+		"url": "https://fr.wikipedia.org/wiki/P._D._James"
+	},
+	{
+		"nom": "nicholson",
+		"prenom": "geoff",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["roman"],
+		"naissance": 1953,
+		"url": "https://fr.wikipedia.org/wiki/P._D._James"
+	},
+	{
+		"nom": "updike",
+		"prenom": "john",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["roman", "nouvelles", "poésie"],
+		"naissance": 1932,
+		"deces": 2009,
+		"url": "https://fr.wikipedia.org/wiki/John_Updike"
+	}
+]
+

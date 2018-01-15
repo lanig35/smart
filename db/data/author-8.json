@@ -1,0 +1,436 @@
+[
+	{
+		"nom": "bauwen",
+		"prenom": "patrick",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["policier"],
+		"naissance": 1968,
+		"url": "https://fr.wikipedia.org/wiki/Patrick_Bauwen"
+	},
+	{
+		"nom": "vian",
+		"prenom": "boris",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1920,
+		"deces":1959,
+		"url": "https://fr.wikipedia.org/wiki/Boris_Vian"
+	},
+	{
+		"nom": "paillet",
+		"prenom": "marc",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["policier"],
+		"naissance": 1918,
+		"deces":2000,
+		"url": "https://fr.wikipedia.org/wiki/Marc_Paillet"
+	},
+	{
+		"nom": "werber",
+		"prenom": "bernard",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["science-fiction"],
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Bernard_Werber"
+	},
+	{
+		"nom": "de maupassant",
+		"prenom": "guy",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman","nouvelles"],
+		"naissance": 1850,
+		"deces":1893,
+		"url": "https://fr.wikipedia.org/wiki/Guy_de_Maupassant"
+	},
+	{
+		"nom": "appery",
+		"prenom": "yann",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1972,
+		"url": "https://fr.wikipedia.org/wiki/Yann_Apperry",
+		"prix": [{"nom": "Médicis","annee":2000},{"nom":"Goncourt lycéens","annee":2003}]
+	},
+	{
+		"nom": "findley",
+		"prenom": "timothy",
+		"sexe":"H",
+		"pays":"canada",
+		"langue": "anglais canadien",
+		"genres":["roman"],
+		"naissance":1930,
+		"deces":2002,
+		"url":"https://fr.wikipedia.org/wiki/Timothy_Findley"
+	},
+	{
+		"nom": "johnson",
+		"prenom":"rachel",
+		"sexe":"F",
+		"pays":"angleterre",
+		"langue":"anglais britannique",
+		"genres":["roman"],
+		"naissance":1965
+	},
+	{
+		"nom": "stevenson",
+		"prenom": "robert louis",
+		"sexe":"H",
+		"pays":"écosse",
+		"langue":"anglais britannique",
+		"genres":["aventure"],
+		"naissance":1850,
+		"deces":1894,
+		"url":"https://fr.wikipedia.org/wiki/Robert_Louis_Stevenson"
+	},
+	{
+		"nom": "lutz",
+		"prenom": "lisa",
+		"sexe":"F",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance": 1970,
+		"url": "https://fr.wikipedia.org/wiki/Lisa_Lutz"
+	},
+	{
+		"nom": "crais",
+		"prenom": "robert",
+		"sexe":"H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"naissance":1953,
+		"url": "https://fr.wikipedia.org/wiki/Robert_Crais"
+	},
+	{
+		"nom": "carr",
+		"prenom": "caleb",
+		"sexe":"H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier"],
+		"naissance":1955,
+		"url":"https://fr.wikipedia.org/wiki/Caleb_Carr"
+	},
+	{
+		"nom": "coben",
+		"prenom": "harlan",
+		"sexe":"H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["policier","thriller"],
+		"naissance":1962,
+		"url":"https://fr.wikipedia.org/wiki/Harlan_Coben"
+	},
+	{
+		"nom": "blondel",
+		"prenom": "jean-philippe",
+		"sexe":"H",
+		"pays":"france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance":1964,
+		"url":"https://fr.wikipedia.org/wiki/Jean-Philippe_Blondel"
+	},
+	{
+		"nom": "lurie",
+		"prenom": "alison",
+		"sexe":"F",
+		"pays": "états-unis",
+		"langue":"anglais américain",
+		"genres":["roman"],
+		"naissance": 1926,
+		"url": "https://fr.wikipedia.org/wiki/Alison_Lurie"
+	},
+	{
+		"nom": "le clézio",
+		"prenom": "j.m.g.",
+		"sexe":"H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman","nouvelles"],
+		"naissance": 1940,
+		"url": "https://fr.wikipedia.org/wiki/J._M._G._Le_Cl%C3%A9zio",
+		"prix":[{"nom":"Renaudot","annee":1963},{"nom":"Nobel littérature","annee":2008}]
+	},
+	{
+		"nom": "marias",
+		"prenom":"javier",
+		"sexe":"H",
+		"pays":"espagne",
+		"langue":"espagnol",
+		"genres":["roman","nouvelles"],
+		"naissance":1951,
+		"url":"https://fr.wikipedia.org/wiki/Javier_Mar%C3%ADas"
+	},
+	{
+		"nom": "s\u00E1bato",
+		"prenom": "ernesto",
+		"sexe":"H",
+		"pays":"argentine",
+		"langue":"espagnol",
+		"genres":["roman"],
+		"naissance":1911,
+		"deces":2011,
+		"url":"https://fr.wikipedia.org/wiki/Ernesto_S%C3%A1bato"
+	},
+	{
+		"nom": "genevoix",
+		"prenom": "maurice",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres":["roman"],
+		"naissance": 1890,
+		"deces":1980,
+		"url":"https://fr.wikipedia.org/wiki/Maurice_Genevoix",
+		"prix":[{"nom":"Goncourt","annee":1925}]
+	},
+	{
+		"nom": "baldwin",
+		"prenom": "james",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres":["roman", "nouvelles"],
+		"naissance": 1924,
+		"deces":1987,
+		"url": "https://fr.wikipedia.org/wiki/James_Baldwin_(%C3%A9crivain)"
+	},
+	{
+		"nom": "giono",
+		"prenom": "jean",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman","théatre"],
+		"naissance":1895,
+		"deces":1970,
+		"url":"https://fr.wikipedia.org/wiki/Jean_Giono"
+	},
+	{
+		"nom": "cendras",
+		"prenom":"blaise",
+		"sexe":"H",
+		"pays":"suisse",
+		"langue":"français",
+		"genres":["roman","poésie"],
+		"naissance": 1887,
+		"deces":1961,
+		"url":"https://fr.wikipedia.org/wiki/Blaise_Cendrars"
+	},
+	{
+		"nom":"lenteric",
+		"prenom":"bernard",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["espionnage"],
+		"naissance": 1934,
+		"deces":2009,
+		"url":"https://fr.wikipedia.org/wiki/Bernard_Lenteric"
+	},
+	{
+		"nom": "de braz",
+		"prenom": "anatole",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman","voyage"],
+		"naissance": 1859,
+		"deces":1926,
+		"url":"https://fr.wikipedia.org/wiki/Anatole_Le_Braz"
+	},
+	{
+		"nom": "Lévy",
+		"prenom": "bernard-henri",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance": 1948,
+		"url": "https://fr.wikipedia.org/wiki/Bernard-Henri_L%C3%A9vy"
+	},
+	{
+		"nom": "fante",
+		"prenom": "john",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue": "anglais américain",
+		"genres":["roman"],
+		"naissance":1909,
+		"deces":1983,
+		"url":"https://fr.wikipedia.org/wiki/John_Fante"
+	},
+	{
+		"nom": "murail",
+		"prenom": "elvire",
+		"sexe":"F",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1958,
+		"url":"https://fr.wikipedia.org/wiki/Elvire_Murail"
+	},
+	{
+		"nom":"lodoli",
+		"prenom":"marco",
+		"sexe":"H",
+		"pays":"italie",
+		"langue":"italien",
+		"genres":["roman"],
+		"naissance":1956
+	},
+	{
+		"nom": "sabatier",
+		"prenom":"robert",
+		"sexe":"H",
+		"pays":"france",
+		"langue": "français",
+		"genres":["roman","poésie"],
+		"naissance":1923,
+		"deces":2012,
+		"url":"https://fr.wikipedia.org/wiki/Robert_Sabatier"
+	},
+	{
+		"nom":"seignolle",
+		"prenom":"claude",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman","contes","nouvelles"],
+		"naissance":1917,
+		"url": "https://fr.wikipedia.org/wiki/Claude_Seignolle"
+	},
+	{
+		"nom":"verne",
+		"prenom":"jules",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["aventure","anticipation"],
+		"naissance":1828,
+		"deces":1905,
+		"url":"https://fr.wikipedia.org/wiki/Jules_Verne"
+	},
+	{
+		"nom":"gaarder",
+		"prenom": "jostein",
+		"sexe":"H",
+		"pays":"norvège",
+		"langue":"norvégien",
+		"genres":["roman"],
+		"naissance":1652,
+		"url":"https://fr.wikipedia.org/wiki/Jostein_Gaarder"
+	},
+	{
+		"nom": "Lévis-Strauus",
+		"prenom":"claude",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["ethnographie"],
+		"naissance":1908,
+		"deces":2009,
+		"url":"https://fr.wikipedia.org/wiki/Claude_L%C3%A9vi-Strauss"
+	},
+	{
+		"nom":"bradbury",
+		"prenom":"ray",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue":"anglais américain",
+		"genres":["science-fiction","anticipation"],
+		"naissance":1920,
+		"deces":2012,
+		"url":"https://fr.wikipedia.org/wiki/Ray_Bradbury"
+	},
+	{
+		"nom": "Baltouchis",
+		"prenom":"Youozas",
+		"sexe":"H",
+		"pays":"Lituanie",
+		"langue":"lituanien",
+		"genres":["roman"],
+		"naissance":1909,
+		"deces":1991
+	},
+	{
+		"nom":"labro",
+		"prenom":"philippe",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1936,
+		"url": "https://fr.wikipedia.org/wiki/Philippe_Labro"
+	},
+	{
+		"nom":"giuidicelli",
+		"prenom":"christian",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1942,
+		"prix":[{"nom":"Renaudot","annee":1986}]
+	},
+	{
+		"nom":"cavanna",
+		"prenom":"françois",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genre": ["autobiographie","humour"],
+		"naissance":1923,
+		"deces":2014,
+		"url": "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Cavanna"
+	},
+	{
+		"nom":"bukowski",
+		"prenom":"charles",
+		"sexe":"H",
+		"pays":"états-unis",
+		"langue":"anglais américain",
+		"genres":["roman"],
+		"naissance":1920,
+		"deces":1994,
+		"url":"https://fr.wikipedia.org/wiki/Charles_Bukowski"
+	},
+	{
+		"nom":"dedet",
+		"prenom":"christian",
+		"sexe":"H",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1936
+	},
+	{
+		"nom":"dormann",
+		"prenom":"geneviève",
+		"sexe":"F",
+		"pays":"france",
+		"langue":"français",
+		"genres":["roman"],
+		"naissance":1933,
+		"deces":2015,
+		"url":"https://fr.wikipedia.org/wiki/Genevi%C3%A8ve_Dormann"
+	}
+]
+
+
+	
+

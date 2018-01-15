@@ -1,0 +1,144 @@
+[
+	{
+		"nom": "riel",
+		"prenom": "j\u00F8rn",
+		"sexe": "H",
+		"pays": "danemark",
+		"langue": "Danois",
+		"serie": "racontars",
+		"genres": ["nouvelles"],
+		"naissance": 1931,
+		"url": "https://fr.wikipedia.org/wiki/J%C3%B8rn_Riel"
+	},
+	{
+		"nom": "dexter",
+		"prenom": "colin",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["policier", "nouvelles"],
+		"serie": "inspecteur Morse",
+		"naissance": 1930,
+		"deces": 2017,
+		"url": "https://fr.wikipedia.org/wiki/Colin_Dexter"
+	},
+	{	"nom": "malet",
+		"prenom": "léo",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"serie": "nestor burma",
+		"genres": ["policier", "poésie"],
+		"naissance": 1909,
+		"deces": 1996,
+		"url": "https://fr.wikipedia.org/wiki/L%C3%A9o_Malet"
+	},
+	{
+		"nom": "meyer",
+		"prenom": "deon",
+		"sexe": "H",
+		"pays": "afrique du sud",
+		"langue": "Afrikaans",
+		"genres": ["policier"],
+		"naissance": 1958,
+		"url": "https://fr.wikipedia.org/wiki/Deon_Meyer"
+	},
+	{
+		"nom": "lieberman",
+		"prenom": "herbert",
+		"sexe": "H",
+		"pays": "états-unis",
+		"langue": "anglais américain",
+		"genres": ["policier", "anticipation"],
+		"naissance": 1933,
+		"url": "https://fr.wikipedia.org/wiki/Herbert_Lieberman"
+	},
+	{
+		"nom": "mendoza",
+		"prenom": "eduardo",
+		"sexe": "H",
+		"pays": "espagne",
+		"langue": "catalan",
+		"genre": ["roman"],
+		"naissance": 1943,
+		"url": "https://fr.wikipedia.org/wiki/Eduardo_Mendoza"
+	},
+	{
+		"nom": "mankell",
+		"prenom": "henning",
+		"sexe": "H",
+		"pays": "suède",
+		"langue": "suédois",
+		"genres": ["policier"],
+		"serie": "Kurt Wallander",
+		"naissance": 1948,
+		"deces": 2015,
+		"url": "https://fr.wikipedia.org/wiki/Henning_Mankell"
+	},
+	{
+		"nom": "May",
+		"prenom": "peter",
+		"sexe": "H",
+		"pays": "écosse",
+		"langue": "anglais britannique",
+		"genres": ["policier"],
+		"naissance": 1951,
+		"url": "https://fr.wikipedia.org/wiki/Peter_May"
+	},
+	{
+		"nom": "legardinier",
+		"prenom": "gilles",
+		"sexe": "H",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier", "humour"],
+		"naissance": 1965,
+		"url": "https://fr.wikipedia.org/wiki/Gilles_Legardinier"
+	},
+	{
+		"nom": "vargas",
+		"prenom": "fred",
+		"sexe": "F",
+		"pays": "france",
+		"langue": "français",
+		"genres": ["policier"],
+		"serie": "Commissaire Adamsberg",
+		"naissance": 1957,
+		"url": "https://fr.wikipedia.org/wiki/Fred_Vargas"
+	},
+	{
+		"nom": "Indri\u00F4ason",
+		"prenom": "arnaldur",
+		"sexe": "H",
+		"pays": "islande",
+		"langue": "islandais",
+		"genres": ["policier"],
+		"serie": "Erlendur",
+		"naissance": 1961,
+		"url": "https://fr.wikipedia.org/wiki/Arnaldur_Indri%C3%B0ason"
+	},
+	{
+		"nom": "sharpe",
+		"prenom": "tom",
+		"sexe": "H",
+		"pays": "angleterre",
+		"langue": "anglais britannique",
+		"genres": ["humour"],
+		"serie": "Wilt",
+		"naissance": 1928,
+		"deces": 2013,
+		"url": "https://fr.wikipedia.org/wiki/Tom_Sharpe"
+	},
+	{
+		"nom": "edwardson",
+		"prenom": "\u00E5ke",
+		"sexe": "H",
+		"pays": "suède",
+		"langue": "suédois",
+		"genres": ["policier"],
+		"serie": "Commissaire Winter",
+		"naissance": 1953,
+		"url": "https://fr.wikipedia.org/wiki/%C3%85ke_Edwardson"
+	}
+]
+

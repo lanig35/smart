@@ -25,7 +25,7 @@ def secret ():
 # mise en place des commandes groupées
 from commands import taches, tickets, livres, auteurs, comptes, bases
 manager.add_command (u'bases', bases)
-manager.add_command (u'taches', taches)
+manager.add_command (u'tâches', taches)
 manager.add_command (u'auteurs', auteurs)
 manager.add_command (u'livres', livres)
 manager.add_command (u'comptes', comptes)
@@ -62,6 +62,9 @@ if __name__ == "__main__":
 
     # désactivation logging Flask
     app.logger.disabled = True
+
+    import sys
+    sys.argv[7] = sys.argv[7].decode('cp1252')
 
     # lancement du programme
     manager.run ()
