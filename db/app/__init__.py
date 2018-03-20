@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
+from flask_bootstrap import Bootstrap
 
 # creation de l'application
 app = Flask (__name__, instance_relative_config=True)
@@ -13,6 +14,9 @@ app = Flask (__name__, instance_relative_config=True)
 app.config.from_object ('config.default')
 app.config.from_pyfile ('config.py', silent=True)
 app.config.from_envvar('APP_CONFIG_FILE', silent=True)
+
+# enregistrement des extensions
+bootstrap = Bootstrap (app)
 
 # creation du blueprint principal
 from .main import bp_main

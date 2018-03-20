@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} {{title}}-A {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbard-fixed-top">
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Pays</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for auteur in auteurs %}
+            <tr>
+                <td>{{auteur.nom}}</td>
+                <td>{{auteur.prenom}}</td>
+                <td>{{auteur.pays}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

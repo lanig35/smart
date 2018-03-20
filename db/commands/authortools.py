@@ -87,7 +87,8 @@ def list (f, count, start, filtre, name=None):
 
         target = '_design/authors/_view/par'+key.capitalize()
 #        params ['key']='\"{}\"'.format (val.decode('cp1252').capitalize())
-        params ['key']='\"{}\"'.format (val.title())
+        print val.title() if key != 'genre' else val
+        params ['key']='\"{}\"'.format (val.title() if key != 'genre' else val)
 
     # récupération de la liste des documents
     view = db.get (target, params)
@@ -122,8 +123,6 @@ def list (f, count, start, filtre, name=None):
     sortie = {'total': total, 'count': count, 'start': start, 'auteurs': data}
     with open ('alain.json', 'w') as f:
         json.dump (sortie, f)
-        import sys
-        json.dump (sortie, sys.stdout)
     return json.dumps (sortie, ensure_ascii=False).encode('utf8')
 
 @auteurs.option ('-d', '--db', dest='name', default=None, help=u'Nom de la base')

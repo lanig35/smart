@@ -1,5 +1,7 @@
 # specific
 log/
+home/log
+home/db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

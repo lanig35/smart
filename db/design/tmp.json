@@ -1,0 +1,17 @@
+{
+	"fields":["_id", "nom"],
+	"use_index":"562b332aa83269f586fd6fbad44a5b26107e7b46/essai",
+	"selector":
+	{
+		"pays":{"$in":["Danemark","Su\u00E8de"]},
+		"sexe":"H",
+		"genres": 
+		{
+			"$elemMatch":
+			{
+				"$in":["policier"]
+			}
+		}
+	}
+}
+

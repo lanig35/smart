@@ -1,0 +1,78 @@
+curl -si -XPOST -H 'Content-type:application/json' 'http://localhost:5984/alain/_find' -d '
+{
+"selector": {
+"pays":{"$in":["Danemark","Su\u00E8de"]},"sexe":"H","genres":{"$elemMatch":{"$in":["policier","noir"]}}
+},
+"fields":["_id","nom","pays","sexe","genres"]
+}'
+
+curl -s -XPOST -H 'Content-type:application/json' 'http://localhost:5984/alain/_index' -d '
+{
+"index":{
+"fields":["pays","sexe"]
+},
+"name":"essai",
+"type":"json"
+}' -u admin:reverse
+
+curl -s -XPOST -H 'Content-type:application/json' 'http://localhost:5984/alain/_index' -d '
+{
+"index":{
+> "fields":["pays"],
+> "partial_filter_selector":
+> {
+> "type":"auteur"
+> }
+> },
+> "name":"partial",
+> "type":"json"
+> }' -u admin:reverse
+
+===================================
+{
+	"fields": ["_id","nom","prenom"],
+	"selector": {
+		"$and": [
+			{
+				"pays": {
+					"$eq":"Danemark"
+				}
+			},
+			{
+				"sexe":{
+					"$eq":"H"
+				}
+			},
+			{
+				"langue":{
+					"$regex": "Da*"
+				}
+			},
+			{
+				"genres":{
+					"$elemMatch":{
+						"$in":["policier"]
+					}
+				}
+			}
+
+		]
+	}
+}
+
+{
+	"fields":["_id"],
+	"selector":
+	{
+		"pays":"Danemark",
+		"sexe":"H",
+		"genres": 
+		{
+			"$elemMatch":
+			{
+				"$in":["policier"]
+			}
+		}
+	}
+}
+
