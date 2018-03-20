@@ -2,6 +2,7 @@
 log/
 home/log
 home/db
+home/config/passwd.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
